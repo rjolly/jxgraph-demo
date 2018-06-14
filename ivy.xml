@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ivy-module version="2.0" xmlns:e="http://ant.apache.org/ivy/extra">
+    <info module="jxgraph-demo" organisation="com.github.rjolly" revision="1.0">
+        <description homepage="http://www.curious-creature.com/2006/03/17/swing-demos-animations-and-swing-sightings/"/>
+    </info>
+    <configurations>
+        <conf name="default" extends="runtime,master"/>
+        <conf name="master"/>
+        <conf name="compile"/>
+        <conf name="runtime"/>
+        <conf name="compile-test"/>
+        <conf name="runtime-test"/>
+    </configurations>
+    <dependencies>
+        <dependency org="org.swinglabs" name="swingx-core" rev="1.6.2-2" conf="compile->master;runtime->default"/>
+        <dependency org="org.swinglabs" name="swing-layout" rev="1.0.3" conf="compile->master;runtime->default"/>
+        <dependency org="org.scijava" name="jep" rev="2.4.2" conf="compile->master;runtime->default"/>
+    </dependencies>
+</ivy-module>
