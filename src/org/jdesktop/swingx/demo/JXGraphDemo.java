@@ -13,7 +13,6 @@ import javax.swing.DefaultListModel;
 import javax.swing.JColorChooser;
 import javax.swing.JList;
 import javax.swing.SwingUtilities;
-import javax.swing.UIManager;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import org.jdesktop.swingx.JXGraph;
@@ -59,7 +58,6 @@ public class JXGraphDemo extends javax.swing.JFrame {
         removeButton = new javax.swing.JButton();
         colorButton = new org.jdesktop.swingx.demo.ColorButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("JGraph Demo");
         graph.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         graph.setMinorCountX(3);
@@ -275,10 +273,6 @@ public class JXGraphDemo extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                try {
-                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-                } catch (Exception e) {
-                }
                 new JXGraphDemo().setVisible(true);
             }
         });
